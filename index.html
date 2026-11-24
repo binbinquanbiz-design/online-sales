@@ -3,50 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="LOTTE Online">
-  <meta name="theme-color" content="#f5f7fa">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAA/1BMVEUAAADUAAv9AADRAAfTAArTAAvkAA6zAADTAArUAAvTAAr9/PzUAAt/AADgAA7hAA7mZmv219jbJS3hRUvvpqnqiIz35ufdMjn0ysvaEx3bGyTgAA7gAQ7kVVnoeHzwtLbgAA7hPETpfIHtk5fyvsCZAADfSE7jAAvjX2Xvn6IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADtRyO/AAAAQHRSTlMA+wIPMc7+BE6udf6RAinQ/f39/f39/v39/f2xlP7+/XT9/v7+Bf5B/v4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAl/lH/gAAA8hJREFUeNrtWNlS4zAQlEaSJVl2iAMkEM5d2Ov/f3B7Rr6oykscpWq3ygPEjnG6NVdrHKVWW2211VZbbbX/z8gTtUTXgx/ProOv1OY9utgEpfxV8M2zrsRu7BUYgO8qna3SoTjDHJ8pSvvQKhNn+MUZiHr8l4d9tx0YqCA+PQn+NqUupXshqDbFGICf179L6VYf9ukgDDemEAM6t4//ffqO19fsgjC0JQi8avr8PqQdXr+lOz0wlJANr+oe/zHt+XBIb0MpNQVKiRQNpblLD3ruAaxAKXkVhgY4ZoJtnwN2ob7chSkDWu8lRHfpZSSIl3swltCQ5Md9OpYk8DOC+7TlCE0pKENQjwS3XD8dmq1kDkjZSeK6dPydPrnZ3h7lQgm5mMcIBXTbHdgVabkifaDalqadIMdn14lmVJGKDAAI0o0w/Ol2WPp299JJnqsnKqR2Xm2Y4ZjSKws2rCw+Mxhm2H4gs4ePz7ufEh9TcsfJDPMtM1IZrf7qw4T/5IviC8NsqqieFZXFF4axH4Dflp8eseJ3x3OddkGVqP9piiYPk5o0v+q6th74PhvxRCB2UXCGvb+sWWsph+aHrZvagsIGGL8YPlqcWWVsNnN25aNouJVIBadjgz+rGueQYudccP1ZY5xccO7cEYYJHPEzR9AVHgh444QTKmo5KBbx2B+MIfwu86AllL9THnLE25fJBJzaDRMYJmgWigOATd5uGi4SxMKBZyBQE8EQIlpA0Jq2JxBP6CSBCzV+FiRZO1kTh4gYCfuXOUWwPERayi/w1q4wXzuae2BzTtiDhWVa5+BGZaN20SFQ3GvNRICl84PJwhzgdm9g3qC8bY4xCwQqkkQ7+J/S3HwPv/O0fLfJinFCK+gCUAtZyzJmROB4Aws4IZzxFTa0XKhHO2vSlokUHczRxmTHExyY8qzopfhZt9HE02Qsd59DwB3EX30Y/nTDuHV+Iui7C3kH36hKzp1DgAzzx/BAbzJshAfG5bM8TCIgtRwgVnzjuX0s62YX8vONQ+QB1GRIOx3CMgI/TLwhO6BZueEARWlcQTaWo2hooQe8XKw3sgMSCuIrAm1m83aNGC7zAKAN40QuFUHAWR2CHmgkcLL7LyNgOKkkjrZEZJq6SELEWxn5dmmI8PEgQFw2eFOzNEUYo0mSbS4uv4QgF5GVDbI/cNWLYLK45fJpluegFQLgWWzrgGh0bjZsQOIVewOBE/plIVKilaOgGTNqp+rfmEFu84ULhJROa6u69OnjyzD4ZTicRsXhIl3vq9rVVltttdVW+1fsLztyIeptx5XpAAAAAElFTkSuQmCC">
   <title>Online Performance | LOTTE Mart Dong Nai</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      margin: 0;
-      padding: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
       background: #f5f7fa;
-      overscroll-behavior: none;
-    }
-    .app-frame {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-      box-sizing: border-box;
-      background: linear-gradient(180deg, #f5f7fa 0%, #f5f7fa 60%, #ffffff 100%);
     }
     iframe {
       display: block;
       width: 100%;
-      height: 100%;
-      border: 0;
-      background: #f5f7fa;
+      height: 100vh;
+      height: 100dvh;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <div class="app-frame">
-    <iframe
-      src="https://script.google.com/macros/s/AKfycbxnGJlgY3cK8LhmdHxlqZAa7mRN7D2qcF_nXXu19ZNHHonUtirP2ts2SGoJWOcq8trAjg/exec"
-      title="Online Performance | LOTTE Mart Dong Nai"
-      allow="fullscreen; clipboard-write"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbxnGJlgY3cK8LhmdHxlqZAa7mRN7D2qcF_nXXu19ZNHHonUtirP2ts2SGoJWOcq8trAjg/exec"
+    allow="clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </body>
 </html>
