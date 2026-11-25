@@ -3,29 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="LOTTE Online">
+  <meta name="theme-color" content="#f2f4f8">
+  <link rel="manifest" href="manifest.json">
   <title>Online Performance | LOTTE Mart Dong Nai</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       width: 100%;
       height: 100%;
+      height: 100dvh;
       overflow: hidden;
-      background: #f5f7fa;
+      background: #f2f4f8;
+      overscroll-behavior: none;
+    }
+    .app-shell {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+    }
+    /* Vùng đệm tai thỏ / Dynamic Island hòa trùng màu nền Header */
+    .safe-top {
+      flex: none;
+      height: env(safe-area-inset-top, 0px);
+      background: #f2f4f8;
     }
     iframe {
+      flex: 1;
       display: block;
       width: 100%;
-      height: 100vh;
-      height: 100dvh;
+      height: 100%;
       border: none;
+      background: #f2f4f8;
+    }
+    /* Vùng đệm thanh vuốt đáy iPhone hòa trùng màu trắng thanh Tab Bar */
+    .safe-bottom {
+      flex: none;
+      height: env(safe-area-inset-bottom, 0px);
+      background: #ffffff;
     }
   </style>
 </head>
 <body>
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbxnGJlgY3cK8LhmdHxlqZAa7mRN7D2qcF_nXXu19ZNHHonUtirP2ts2SGoJWOcq8trAjg/exec"
-    allow="clipboard-read; clipboard-write"
-    allowfullscreen>
-  </iframe>
+  <div class="app-shell">
+    <div class="safe-top"></div>
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbxnGJlgY3cK8LhmdHxlqZAa7mRN7D2qcF_nXXu19ZNHHonUtirP2ts2SGoJWOcq8trAjg/exec"
+      allow="fullscreen; clipboard-read; clipboard-write"
+      allowfullscreen>
+    </iframe>
+    <div class="safe-bottom"></div>
+  </div>
 </body>
 </html>
